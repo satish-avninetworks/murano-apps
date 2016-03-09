@@ -52,6 +52,6 @@ Methods:
           - $._environment.securityGroupManager.addGroupIngress($securityGroupIngress)
           - $resources: new(sys:Resources)
           - $template: $resources.yaml('DeployApache.template').bind(dict(enablePHP => $.enablePHP))
-          - $plan: $.instance.agent.call_modified($template, $resources)
+          - $plan: $.instance.agent.callmodified($template, $resources)
           - $.instance.deploy($plan)
           - $._environment.reporter.report($this, 'Apache is installed.')
