@@ -25,7 +25,7 @@ Application:
   enablePHP: $.appConfiguration.enablePHP
   instance:
     ?:
-      type: io.murano.resources.LinuxMuranoInstance
+      type: io.murano.resources.AWSInstance
     name: generateHostname($.instanceConfiguration.unitNamingPattern, 1)
     flavor: $.instanceConfiguration.flavor
     image: $.instanceConfiguration.osImage
