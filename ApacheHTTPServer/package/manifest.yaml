@@ -13,7 +13,7 @@
 Format: 1.0
 Type: Application
 FullName: io.murano.apps.apache.ApacheHttpServer
-Name: Apache HTTP Server
+Name: EC2 Apache HTTP Server
 Description: |
  The Apache HTTP Server Project is an effort to develop and maintain an
  open-source HTTP server for modern operating systems including UNIX and
