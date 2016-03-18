@@ -17,7 +17,6 @@ Application:
     type: io.murano.apps.WordPress
   database: $.appConfiguration.database
   server: $.appConfiguration.server
-  monitoring: $.appConfiguration.zabbix
   dbName: $.dbConfiguration.database
   dbUser: $.dbConfiguration.username
   dbPassword: $.dbConfiguration.password
@@ -41,12 +40,6 @@ Forms:
           label: HTTP Server
           description: >-
             Select an instance of Apache HTTP Server to run the app
-        - name: zabbix
-          type: io.murano.apps.ZabbixAgent
-          label: Monitoring
-          required: false
-          description: >-
-            Select an instance of monitoring system (optional)
 
   - dbConfiguration:
       fields:

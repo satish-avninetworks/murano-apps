@@ -32,8 +32,7 @@ Properties:
     Contract: $.string().notNull()
   dbPassword:
     Contract: $.string().notNull()
-  monitoring:
-    Contract: $.class(ZabbixAgent)
+
 
 Methods:
   initialize:
@@ -79,10 +78,7 @@ Methods:
               ))
           - $.server.instance.agent.call($template, $resources)
 
-          - If: $.monitoring != null
-            Then:
-              - $.monitoring.setUpAgent($.server.instance)
-          
+
           - $._environment.reporter.report($this, 'Application is installed')
           - If: $.server.instance.assignFloatingIp
             Then:

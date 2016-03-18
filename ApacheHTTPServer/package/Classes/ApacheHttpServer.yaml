@@ -28,7 +28,7 @@ Properties:
     Default: false
 
   instance:
-    Contract: $.class(res:Instance).notNull()
+    Contract: $.class(res:AWSInstance).notNull()
 
 Methods:
   initialize:

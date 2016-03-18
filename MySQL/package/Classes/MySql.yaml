@@ -23,7 +23,7 @@ Extends:
 
 Properties:
   instance:
-    Contract: $.class(res:Instance).notNull()
+    Contract: $.class(res:AWSInstance).notNull()
   database:
     Contract: $.string()
   username:

@@ -11,6 +11,12 @@
 #  License for the specific language governing permissions and limitations
 #  under the License.
 
-mysql --user=root --password=root -e "GRANT ALL PRIVILEGES ON $1.* TO '$2'@'localhost' WITH GRANT OPTION"
-mysql --user=root --password=root -e "GRANT ALL PRIVILEGES ON $1.* TO '$2'@'%' WITH GRANT OPTION"
-mysql --user=root --password=root -e "FLUSH PRIVILEGES"
+echo sudo mysql --user=root --password=root -e "GRANT ALL PRIVILEGES ON $1.*
+TO '$2'@'localhost' WITH GRANT OPTION" >> test.txt
+echo sudo mysql --user=root --password=root -e "GRANT ALL PRIVILEGES ON $1.*
+TO '$2'@'%' WITH GRANT OPTION" >>test.txt
+echo sudo mysql --user=root --password=root -e "FLUSH PRIVILEGES" >> test.txt
+
+sudo mysql --user=root --password=root -e "GRANT ALL PRIVILEGES ON $1.* TO '$2'@'localhost' WITH GRANT OPTION"
+sudo mysql --user=root --password=root -e "GRANT ALL PRIVILEGES ON $1.* TO '$2'@'%' WITH GRANT OPTION"
+sudo mysql --user=root --password=root -e "FLUSH PRIVILEGES"

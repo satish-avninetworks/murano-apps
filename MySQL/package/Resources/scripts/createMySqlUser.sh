@@ -11,5 +11,11 @@
 #  License for the specific language governing permissions and limitations
 #  under the License.
 
-mysql --user=root --password=root -e "CREATE USER '$1'@'localhost' IDENTIFIED BY '$2'"
-mysql --user=root --password=root -e "CREATE USER '$1'@'%' IDENTIFIED BY '$2'"
+echo sudo mysql --user=root --password=root -e "CREATE USER '$1'@'localhost' IDENTIFIED
+BY '$2'" >> test.txt
+echo sudo mysql --user=root --password=root -e "CREATE USER '$1'@'%' IDENTIFIED BY '$2'" >> test.txt
+
+
+sudo mysql --user=root --password=root -e "CREATE USER '$1'@'localhost' IDENTIFIED
+BY '$2'"
+sudo mysql --user=root --password=root -e "CREATE USER '$1'@'%' IDENTIFIED BY '$2'"
