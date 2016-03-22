@@ -29,14 +29,8 @@ Application:
     name: generateHostname($.instanceConfiguration.unitNamingPattern, 1)
     flavor: $.instanceConfiguration.flavor
     image: $.instanceConfiguration.ImageID
-    cloud: $.cloudConfiguration.CloudID
-  cloud:
-    ?:
-      type: io.murano.AWSCloud
-    region: $.cloudConfiguration.region
-    provider: $.cloudConfiguration.provider
-    userid: $.cloudConfiguration.userID
-    key: $.cloudConfiguration.SecretKey
+    cloudid: $.cloudConfiguration.CloudID
+
 Forms:
   - appConfiguration:
       fields:
@@ -70,22 +64,22 @@ Forms:
           type: string
           label: Cloud Provider
           description: Choose the Cloud Provider you want to use.
-          required: true
+          required: false
         - name: region
           type: string
           label: Cloud Region
           description: Select Cloud region where application would be installed.
-          required: true
+          required: false
         - name: userID
           type: string
           label: userID
           description: Enter UserID for the cloud selected.
-          required: true 
+          required: false
         - name: SecretKey
           type: string
           label: SecretKey
           description: Enter Secret Key for the cloud selected.
-          required: true
+          required: false
   - instanceConfiguration:
       fields:
         - name: title
