@@ -29,6 +29,7 @@ Application:
     name: generateHostname($.instanceConfiguration.unitNamingPattern, 1)
     flavor: $.instanceConfiguration.flavor
     image: $.instanceConfiguration.ImageID
+    cloud: $.cloudConfiguration.CloudID
   cloud:
     ?:
       type: io.murano.AWSCloud
@@ -60,6 +61,11 @@ Forms:
           required: false
   - cloudConfiguration:
       fields:
+        - name: cloudID
+          type: cloud
+          label: Cloud Credentials
+          description: Choose the Cloud Credentials you want to use.
+          required: true
         - name: provider
           type: string
           label: Cloud Provider
